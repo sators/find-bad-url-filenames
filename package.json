@@ -6,13 +6,23 @@
   "bin": {
     "find-bad-filenames": "./index.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Sators <sators@sators.com>",
   "license": "ISC",
   "dependencies": {
     "filename-reserved-regex": "^2.0.0",
     "yargs": "^16.2.0"
-  }
+  },
+  "keywords": [
+    "filename",
+    "illegal",
+    "reserved",
+    "windows",
+    "characters",
+    "invalid",
+    "valid",
+    "detect",
+    "path",
+    "filepath",
+    "dirname"
+  ]
 }
