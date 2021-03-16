@@ -1,5 +1,5 @@
 {
-  "name": "findbadfilenames",
+  "name": "find-bad-filenames",
   "version": "1.0.0",
   "description": "A node executable to find any filenames recursively with invalid characters in them",
   "main": "index.js",
