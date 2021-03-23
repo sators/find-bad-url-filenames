@@ -1,22 +1,21 @@
 {
-  "name": "find-bad-filenames",
+  "name": "find-bad-url-filenames",
   "version": "1.0.1",
-  "description": "A node executable to find any filenames recursively with invalid characters in them",
+  "description": "A node executable to find any filenames recursively with characters that don't belong in URLs",
   "main": "index.js",
   "bin": {
-    "find-bad-filenames": "./index.js"
+    "find-bad-url-filenames": "./index.js"
   },
   "author": "Sators <sators@sators.com>",
   "license": "ISC",
   "dependencies": {
-    "filename-reserved-regex": "^2.0.0",
     "yargs": "^16.2.0"
   },
   "keywords": [
     "filename",
     "illegal",
     "reserved",
-    "windows",
+    "url",
     "characters",
     "invalid",
     "valid",
