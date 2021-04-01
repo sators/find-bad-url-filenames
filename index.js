@@ -25,18 +25,12 @@ const workingDirectory = argv._[0] ? path.resolve(argv._[0]) : process.cwd()
 
 const files = getAllFiles(workingDirectory)
 
-var illegalRe = /[\/\?<>\(\)\\:\*\|"!@#$%^&]/g;
-var controlRe = /[\x00-\x1f\x80-\x9f]/g;
-var reservedRe = /^\.+$/;
-var windowsReservedRe = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
-var windowsTrailingRe = /[\. ]+$/;
-
 const badFiles = files.filter(file => (
-  illegalRe.test(file.filename) ||
-  controlRe.test(file.filename) ||
-  reservedRe.test(file.filename) ||
-  windowsReservedRe.test(file.filename) ||
-  windowsTrailingRe.test(file.filename)
+  /[+\/\\?<>():*|"!@#$%^&]/g.test(file.filename) ||
+  /[\x00-\x1f\x80-\x9f]/g.test(file.filename) ||
+  /^\.+$/.test(file.filename) ||
+  /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i.test(file.filename) ||
+  /[\. ]+$/.test(file.filename)
 ))
 
 if (badFiles.length){
