@@ -1,6 +1,6 @@
 {
   "name": "find-bad-url-filenames",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A node executable to find any filenames recursively with characters that don't belong in URLs",
   "main": "index.js",
   "bin": {
